@@ -24,4 +24,4 @@ use "cd\
 pip install -r req.txt" to install all packages 
 
 
-reffer run_project file ,created batch file to run project 
+reffer run_project file ,create batch file to run project 
