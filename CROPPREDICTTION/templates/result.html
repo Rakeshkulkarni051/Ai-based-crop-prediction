@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Crop</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+        .result_background img {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            font-family: "Poppins", sans-serif;
+            overflow: hidden;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Vertically centers the h1 */
+            align-items: center;
+        }
+
+        .content h4, .content h1 {
+            -webkit-text-stroke: 1px white; /* White stroke around the text */
+        }
+
+        .content h4 {
+            font-size: 38px;
+            color: rgb(29, 29, 29);
+            margin-bottom: 16px; /* Space between h4 and h1 */
+            margin-left: 10px; /* Moves h4 to the right by 4px */
+        }
+
+        .content h1 {
+            font-size: 40px;
+            color: rgb(229, 17, 17);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="result_background">
+        <img src="{% static 'Assets/resultbg2.jpg' %}" alt="Background Image">
+    </div>
+
+    <div class="content">
+        <h4>Recommended Crop</h4>
+        <h1>{{ ans }}</h1>
+    </div>
+
+</body>
+</html>

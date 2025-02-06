@@ -1,0 +1,52 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Crop</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div class="Form">
+        <div class="Form_body">
+            <video autoplay muted plays-inline loop class="bg-video">
+                    <source src="{% static 'Assets/form_bgv.mp4' %}" type="video/mp4">
+            </video>
+            <form autocomplete="off" action="result" name="frm"  method="post" >
+                <center>  <h3>Enter all the Fields to Predict the Crop</h3> </center>
+                <label for="number-input">Nitrogen:</label>
+                <input type="number"  id="number-input" name="N" required autofocus="on">
+          
+                <label for="password-input">Phosphate:</label>
+                <input type="number" id="number-input" name="P" required>
+          
+                <label for="number-input">Potassium :</label>
+                <input type="number" id="number-input" name="K" required>
+          
+                <label for="number-input">Temperature(in Degree):</label>
+                <input type="number" id="number-input" name="T" required>
+          
+                <label for="number-imput">Humidity:</label>
+                <input type="number" id="date-input" name="NEM" required>
+          
+                <label for="number-input">pH Value:</label>
+                <input type="number" id="number-input" name="pH" value="#ff0000" required>
+                
+                <label for="number-input">Rain fall(mm):</label>
+                <input type="number" id="number-input" name="mm" value="#ff0000" required>
+                <center>
+                    <button type="submit" class="predict-button">Predict</button>
+                </center>
+                 {% csrf_token %}
+            </form>
+            
+
+        </div>
+
+
+    </div>
+    
+</body>
+</html>

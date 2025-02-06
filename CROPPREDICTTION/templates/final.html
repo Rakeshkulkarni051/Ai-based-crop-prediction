@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="res_container">
+
+
+        <video autoplay muted plays-inline loop class="bg-video">
+            <source src="Assets/result_theme.mp4" type="video/mp4">
+        </video>
+        <div class="crop_res">
+            <h3>Recommended Crop:</h3>
+
+            <h2>{{ ans }}</h2>
+        </div>
+        
+        <div class="chemicals">
+            <h4>chemicals: {{ lis.0 }}</h4>
+            <h4>{{ lis.1 }}</h4>
+            <h4>{{ lis.2 }}</h4>
+        </div>
+
+        <div class="rainfall">
+             <h4>{{ lis.4 }}</h4>
+         </div>
+    
+        <div class="Humidity">
+             <h4>{{ lis.6 }}</h4>
+        </div>
+
+    </div>
+   
+</body>
+</html>
